@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Analyze_V3 Results</title>
+</head>
+<body>
+  <h1>Analyze_V3</h1>
+  <p>This repository contains a small data analysis script (execute.py) that reads <code>data.csv</code> and writes <code>result.json</code>.</p>
+  <p>The GitHub Actions workflow (.github/workflows/ci.yml) runs ruff, executes the script and publishes the generated <code>result.json</code> via GitHub Pages.</p>
+  <p>When the workflow runs, the generated result will be available at <a href="/result.json">/result.json</a>.</p>
+  <p>If you want to view results locally, run:</p>
+  <pre>python execute.py &gt; result.json
+python -m http.server 8000
+# then open http://localhost:8000/result.json</pre>
+</body>
+</html>
